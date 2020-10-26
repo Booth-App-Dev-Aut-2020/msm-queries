@@ -1,0 +1,58 @@
+<h1> Movie <%=@mov.id%> details </h1>
+<a href="/movies" class="btn btn-block btn-iutline-secondary"> Go back </a>
+
+&nbsp;|&nbsp;
+
+<a href="/delete_movie/<%=@mov.id%>" class="btn btn-block btn-iutline-secondary"> Delete movie </a>
+
+<hr>
+
+<dl>
+  <dt>
+  Title
+  </dt>
+  <dd>
+  <%=@mov.title%>
+  </dd>
+  <dt>
+  Year
+  </dt>
+  <dd>
+  <%=@mov.year%>
+  </dd>
+ <dt>
+  Duration
+  </dt>
+  <dd>
+  <%=@mov.duration%>
+  </dd>
+   <dt>
+  Description
+  </dt>
+  <dd>
+  <%=@mov.description%>
+  </dd>
+   <dt>
+  Image
+  </dt>
+  <dd>
+  <img src="https://robohash.org/<%=@mov.image%>">
+  </dd>
+   <dt>
+  Director
+  </dt>
+  <dd>
+  <%=Director.where({:id=>@mov.director_id}).first.name%>
+  </dd>
+   <dt>
+  Created at
+  </dt>
+  <dd>
+  <%= time_ago_in_words(@mov.created_at)%> ago
+  </dd>
+    <dt>
+  Updated at
+  </dt>
+  <dd>
+  <%= time_ago_in_words(@mov.updated_at)%> ago
+  </dd>

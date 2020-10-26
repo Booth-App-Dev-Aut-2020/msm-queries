@@ -1,0 +1,46 @@
+<h1> Director <%=@dir.id%> details </h1>
+<a href="/directors" class="btn btn-block btn-iutline-secondary"> Go back </a>
+
+&nbsp;|&nbsp;
+
+<a href="/delete_director/<%=@dir.id%>" class="btn btn-block btn-iutline-secondary"> Delete director </a>
+
+<hr>
+
+<dl>
+  <dt>
+  Name
+  </dt>
+  <dd>
+  <%=@dir.name%>
+  </dd>
+  <dt>
+  Dob
+  </dt>
+  <dd>
+  <%=@dir.dob%>
+  </dd>
+ <dt>
+  Bio
+  </dt>
+  <dd>
+  <%=@dir.bio%>
+  </dd>
+   <dt>
+  Image
+  </dt>
+  <dd>
+  <img src="https://robohash.org/<%=@dir.image%>">
+  </dd>
+   <dt>
+  Created at
+  </dt>
+  <dd>
+  <%=@dir.created_at%>
+  </dd>
+    <dt>
+  Updated at
+  </dt>
+  <dd>
+  <%=@dir.updated_at%>
+  </dd>

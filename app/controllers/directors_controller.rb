@@ -15,4 +15,10 @@ class DirectorsController < ApplicationController
     render ({ :template => "director_templates/youngest.html.erb"})
   end
 
+  def director_details
+    the_id = params.fetch("dir_id")
+    @dir = Director.where({:id=>the_id}).at(0)
+    render ({ :template => "director_templates/show.html.erb"})
+  end
+
 end 

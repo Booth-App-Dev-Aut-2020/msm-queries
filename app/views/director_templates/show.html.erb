@@ -36,11 +36,11 @@
   Created at
   </dt>
   <dd>
-  <%=@dir.created_at%>
+  <%= time_ago_in_words(@dir.created_at)%> ago
   </dd>
     <dt>
   Updated at
   </dt>
   <dd>
-  <%=@dir.updated_at%>
+  <%= time_ago_in_words(@dir.updated_at)%> ago
   </dd>
